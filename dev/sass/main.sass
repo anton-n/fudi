@@ -1,0 +1,448 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+html
+	box-sizing: border-box
+
+*
+	box-sizing: inherit
+
+html, body
+	height: 100%
+
+body
+	font-family: $default-font
+	font-size: 16px
+	line-height: 1.5
+	color: #000
+	font-weight: 300
+
+img
+	display: block
+	max-width: 100%
+	height: auto
+
+.clearfix::after
+	content: ""
+	display: table
+	clear: both
+
+.preloader
+	background: #fff none repeat scroll
+	height: 100%
+	width: 100%
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	z-index: 9999
+
+.preloader_inner
+	background: #fff url("../img/preloader.gif") no-repeat center
+
+	background-size: cover
+	height: 100px
+	width: 100px
+	margin-top: -50px
+	margin-left: -50px
+	left: 50%
+	top: 50%
+	position: absolute
+
+
+.container
+	max-width: 1200px
+	width: 100%
+	margin: 0 auto
+	padding: 0 10px
+
+.header-flex
+	display: flex
+	flex-flow: row wrap
+	justify-content: space-between
+	align-items: center
+
+.header
+	background-image: url("../img/header-bg.jpg")
+	background-position: top center
+	background-repeat: no-repeat
+	background-size: cover
+	min-height: 850px
+	position: relative
+	&-top
+		&__logo
+			&-link
+				display: inline-block
+				vertical-align: top
+	&-list
+		margin: 0
+		padding: 0
+		list-style-type: none
+		&__item
+			margin-right: 20px
+			&:last-child
+				margin-right: 0
+		&__link
+			font-size: 14px
+			font-weight: 700
+			color: #fff
+			text-transform: uppercase
+			text-decoration: none
+			letter-spacing: 1px
+			text-shadow: -0.9px 0.5px 40px rgba(1, 1, 1, .55)
+
+.header__info
+	position: absolute
+	top: 50%
+	margin-top: -145px
+	left: 50%
+	margin-left: -203px
+	display: flex
+	flex-flow: column wrap
+	align-items: center
+
+.header-info
+	&__pre-title
+		font-family: "Times New Roman", Arial, sans-serif
+		font-size: 36px
+		line-height: 46px
+		font-weight: 700
+		font-style: italic
+		color: #fff
+		opacity: .7
+		text-shadow: -0.9px 0.5px 40px rgba(1, 1, 1, .55)
+	&__title
+		margin: 0
+		text-shadow: -0.9px 0.5px 40px rgba(1, 1, 1, .55)
+		color: #fff
+		font-size: 100px
+		font-weight: 700
+		line-height: 130px
+		margin-bottom: 10px
+	&__note
+		margin-top: 35px
+		text-shadow: -0.9px 0.5px 40px rgba(1, 1, 1, .55)
+		color: #fff
+		font-weight: 300
+		font-size: 14px
+		line-height: 21px
+		// letter-spacing: .5px
+		word-spacing: 1px
+		&-link
+			color: #fff
+			text-decoration: underline
+			font-weight: 700
+			cursor: pointer
+			&:hover
+				text-decoration: none
+
+.btn
+	padding: 0 84px
+	height: 70px
+	line-height: 70px
+	border: solid 3px #fff
+	border-radius: 3px
+	font-size: 18px
+	font-weight: 700
+	color: #fff
+	text-transform: uppercase
+	text-decoration: none
+	background-color: transparent
+	opacity: .85
+	cursor: pointer
+	transition: all .5s linear
+	&:hover
+		color: #fff
+		background-color: $accent
+		border-color: $accent
+	&:active
+		color: $accent
+		border-color: $accent
+		background-color: #fff
+
+.section-intro
+	padding: 100px 0 90px
+	background-color: #fff
+	&__flex
+		display: flex
+		flex-flow: row wrap
+		justify-content: space-between
+
+.intro
+	&__item
+		max-width: 360px
+		display: flex
+		flex-flow: column nowrap
+		align-items: center
+		text-align: center
+	&__img-container
+		width: 120px
+		height: 120px
+		border-radius: 50%
+		border: #221f1f solid 2px
+		background-image: url("../img/png-set.png")
+		background-repeat: no-repeat
+		background-position: center
+		margin-bottom: 14px
+	&__title
+		margin: 0
+			bottom: 24px
+		font-size: 18px
+		line-height: 30px
+		font-weight: 700
+		color: #000
+		text-transform: uppercase
+		position: relative
+		&:before
+			position: absolute
+			content: ''
+			height: 1px
+			background-color: #f57365
+			top: 35px
+			left: 15%
+			right: 15%
+	&__description
+		margin: 0
+			bottom: 10px
+		font-weight: 300
+		font-size: 16px
+		line-height: 26px
+		color: #000
+
+.section-phone
+	padding: 180px 0 280px
+	background-color: #f7f7f7
+	background-image: url("../img/phone.png")
+	background-repeat: no-repeat
+	background-position: 25% bottom
+
+
+.phone
+	max-width: 540px
+	// text-align: left
+	&-flex
+		display: flex
+		justify-content: flex-end
+	&__title
+		margin: 0
+			bottom: 24px
+		font-size: 18px
+		line-height: 30px
+		font-weight: 700
+		color: #000
+		text-transform: uppercase
+		position: relative
+		&:before
+			position: absolute
+			content: ''
+			height: 1px
+			background-color: #f57365
+			top: 35px
+			left: 0
+			right: 85%
+	&__paragraph
+		font-weight: 300
+		font-size: 16px
+		line-height: 26px
+		color: #000
+		margin: 0
+			bottom: 40px
+	&__links
+		display: flex
+		flex-flow: row wrap
+	&__link
+		margin-right: 10px
+		cursor: pointer
+
+.slider
+	background-color: #4a3949
+	padding: 80px 0
+	background-image: url("../img/owl-bg.png")
+	background-repeat: no-repeat
+	background-position: center
+.owl-carousel
+	&__item
+		display: flex
+		flex-flow: column nowrap
+		justify-content: center
+		align-items: center
+	&__img
+		width: 110px
+		height: 110px
+		border-radius: 50%
+		border: #968c95 5px solid
+		background-image: url("../img/person.jpg")
+		background-repeat: no-repeat
+		background-position: -25px -10px
+		margin-bottom: 25px
+	&__text
+		max-width: 860px
+		color: #877c86
+		font-weight: 700
+		font-style: italic
+		font-size: 30px
+		text-align: center
+		line-height: 36px
+		margin: 0
+			bottom: 15px
+	&__byline
+		max-width: 860px
+		color: #877c86
+		font-weight: 300
+		font-size: 18px
+		line-height: 24px
+
+
+.owl-theme .owl-dots .owl-dot.active span
+	background-color: #fff
+.owl-theme .owl-dots .owl-dot span
+	background-color: #796d79
+// .owl-theme .owl-dots .owl-dot span:hover
+// .owl-theme .owl-dots .owl-dot.active span:hover
+
+.food
+	&__recipes
+		display: flex
+		flex-flow: row wrap
+	&__item
+		display: block
+		width: 20%
+		height: 225px
+		text-align: center
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center
+		text-decoration: none
+		// cursor: pointer
+	&__title
+		padding-top: 90px
+		text-align: center
+		font-size: 18px
+		font-weight: 700
+		line-height: 30px
+		color: #000
+		position: relative
+		text-transform: uppercase
+		margin: 0
+			bottom: 44px
+		&:before
+			position: absolute
+			content: ''
+			height: 1px
+			background-color: #f57365
+			top: 120px
+			left: 48%
+			right: 48%
+	&__link
+		text-decoration: none
+	&__recipes-count
+		display: block
+		text-shadow: -0.9px 0.5px 40px rgba(1, 1, 1, .55)
+		color: #fff
+		font-family: "Times New Roman", Arial, sans-serif
+		font-size: 15px
+		font-weight: 700
+		font-style: italic
+		line-height: 18px
+		margin-top: 80px
+	&__recipes-country
+		display: block
+		text-shadow: -0.9px 0.5px 40px rgba(1, 1, 1, .55)
+		color: #fff
+		font-size: 36px
+		font-weight: 700
+		line-height: 46px
+		text-decoration: none
+		text-transform: uppercase
+	&__italian
+		background-image: url("../img/italian-resepies.png")
+	&__indian
+		background-image: url("../img/indian-resepies.png")
+	&__french
+		background-image: url("../img/french-resepies.png")
+	&__steakhouse
+		background-image: url("../img/steakhouse-resepies.png")
+	&__seafood
+		background-image: url("../img/seafood-resepies.png")
+	&__sushi
+		background-image: url("../img/sushi-resepies.png")
+	&__mexican
+		background-image: url("../img/mexican-resepies.png")
+	&__chines
+		background-image: url("../img/chines-resepies.png")
+	&__pizza
+		background-image: url("../img/pizza-resepies.png")
+	&__american
+		background-image: url("../img/american-resepies.png")
+
+.statistic-section
+	background-color: #fff
+	border-bottom: #e2e2e2 1px solid
+	&__stat
+		min-height: 178px
+		display: flex
+		flex-flow: row nowrap
+		justify-content: space-between
+		align-items: center
+
+.stat
+	&__item
+		display: flex
+		flex-flow: column nowrap
+		align-items: center
+	&__count
+		display: block
+		color: #000
+		font-size: 36px
+		font-weight: 700
+		line-height: 48px
+		letter-spacing: 2px
+	&__name
+		display: block
+		color: #000
+		font-size: 16px
+		font-weight: 300
+		line-height: 18px
+
+.footer
+	background-color: #f7f7f7
+	&__flex
+		display: flex
+		min-height: 92px
+		flex-flow: row nowrap
+		justify-content: flex-start
+		align-items: center
+	&__copyr
+		font-size: 14px
+		line-height: 18px
+		font-weight: 300
+		color: #c5c5c5
+		word-spacing: 1px
+		margin: 0
+
+.mm-listview
+	text-align: center
+.mm-listview>li:not(.mm-divider):after
+	left: 0
+
+.mm-listview>li:hover
+	background-color: #ccc
+.mm-listview
+		background-color: #f3f3f3
+#my-menu
+	// width: 340px
+.hamburger-inner,
+.hamburger-inner:before,
+.hamburger-inner:after
+	background-color: #fff
+	width: 30px
+	height: 3px
+.hamburger-box
+	display: block
+	width: 30px
+button
+	outline: none
+
+@import "media"

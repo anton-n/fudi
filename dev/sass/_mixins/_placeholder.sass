@@ -1,0 +1,6 @@
+//https://codepen.io/electric_g/pen/xdtDu
+@mixin placeholder ($par: "&")
+	@each $prefix in "::-webkit-input-", "::-moz-", ":-ms-input-"
+		#{$par}#{$prefix}placeholder
+			@content
+			// opacity: 1 for firefox
