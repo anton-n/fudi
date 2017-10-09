@@ -5323,6 +5323,7 @@ img {
 	font-size: 14px;
 	line-height: 21px;
 	word-spacing: 1px;
+	display: block;
 }
 
 .header-info__note-link {
@@ -5380,13 +5381,13 @@ img {
 	display: flex;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
-	-webkit-flex-flow: row wrap;
-	-ms-flex-flow: row wrap;
-	flex-flow: row wrap;
-	-webkit-box-pack: justify;
-	-webkit-justify-content: space-between;
-	-ms-flex-pack: justify;
-	justify-content: space-between;
+	-webkit-flex-flow: row nowrap;
+	-ms-flex-flow: row nowrap;
+	flex-flow: row nowrap;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
 }
 
 .intro__item {
@@ -5428,6 +5429,7 @@ img {
 	color: #000;
 	text-transform: uppercase;
 	position: relative;
+	max-width: 285px;
 }
 
 .intro__title:before {
@@ -5447,6 +5449,7 @@ img {
 	font-size: 16px;
 	line-height: 26px;
 	color: #000;
+	max-width: 100%;
 }
 
 .section-phone {
@@ -5545,6 +5548,7 @@ img {
 	-webkit-align-items: center;
 	-ms-flex-align: center;
 	align-items: center;
+	cursor: pointer;
 }
 
 .owl-carousel__img {
@@ -5707,7 +5711,7 @@ img {
 }
 
 .statistic-section__stat {
-	min-height: 178px;
+	height: 178px;
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
@@ -5769,7 +5773,7 @@ img {
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
-	min-height: 92px;
+	height: 92px;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
 	-webkit-flex-flow: row nowrap;

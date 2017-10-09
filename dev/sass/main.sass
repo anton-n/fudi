@@ -130,6 +130,7 @@ img
 		line-height: 21px
 		// letter-spacing: .5px
 		word-spacing: 1px
+		display: block
 		&-link
 			color: #fff
 			text-decoration: underline
@@ -167,8 +168,10 @@ img
 	background-color: #fff
 	&__flex
 		display: flex
-		flex-flow: row wrap
-		justify-content: space-between
+		// flex-flow: row wrap
+		flex-flow: row nowrap
+		// justify-content: space-between
+		justify-content: center
 
 .intro
 	&__item
@@ -195,6 +198,7 @@ img
 		color: #000
 		text-transform: uppercase
 		position: relative
+		max-width: 285px
 		&:before
 			position: absolute
 			content: ''
@@ -210,6 +214,7 @@ img
 		font-size: 16px
 		line-height: 26px
 		color: #000
+		max-width: 100%
 
 .section-phone
 	padding: 180px 0 280px
@@ -268,6 +273,7 @@ img
 		flex-flow: column nowrap
 		justify-content: center
 		align-items: center
+		cursor: pointer
 	&__img
 		width: 110px
 		height: 110px
@@ -381,7 +387,7 @@ img
 	background-color: #fff
 	border-bottom: #e2e2e2 1px solid
 	&__stat
-		min-height: 178px
+		height: 178px
 		display: flex
 		flex-flow: row nowrap
 		justify-content: space-between
@@ -410,7 +416,7 @@ img
 	background-color: #f7f7f7
 	&__flex
 		display: flex
-		min-height: 92px
+		height: 92px
 		flex-flow: row nowrap
 		justify-content: flex-start
 		align-items: center
